@@ -79,15 +79,31 @@ label{
   align-items: center;
 }
 
-img{
+.icon-error img{
   position: absolute;
   right: 1rem;
   bottom: 2.3rem;
 }
 
-#password-reveal{
-  width: 5%;
+div .field{
+  position: relative;
 }
+
+.first-error-text,
+.last-error-text,
+.email-error-text,
+.password-error-text{
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(255, 0, 0);
+  position: absolute;
+  top: 3.3rem;
+  right: 0.3rem;
+  padding-top: 0.3rem;
+  font-style: italic;
+}
+
+
 
 input {
   display: block;
@@ -123,6 +139,21 @@ button {
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+#first-warning,
+#last-warning,
+#email-warning {
+  display: none;
+}
+
+
+#password-reveal{
+  width: 5%;
+  cursor: pointer !important
+  
 }
 
 small {
@@ -140,3 +171,29 @@ small span {
 }
 
 
+
+@media screen and (max-width: 600px), (max-width: 999.99px) {
+  .container {
+    flex-direction: column;
+    height: 90%;
+    max-width: 90vw;
+  }
+  .container-text {
+    text-align: center;
+    width: 100%;
+    padding-top: 3rem;
+  }
+  .container-form {
+    padding-bottom: 3rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    padding: 1rem 1rem;
+  }
+  small {
+    display: block;
+    text-align: center;
+  }
+}
